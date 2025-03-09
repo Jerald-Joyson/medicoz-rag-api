@@ -42,7 +42,7 @@ class HuggingFaceLLM:
         try:
             response = self.client.text_generation(
                 prompt,
-                model=self_id,
+                model=self.model_id,  # Fixed typo: Changed self_id to self.model_id
                 max_new_tokens=512,
                 temperature=0.1,
                 repetition_penalty=1.1,
